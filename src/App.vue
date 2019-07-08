@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <div class="front">
-		<!-- 头部 -->
-      <head-nav></head-nav>
+		<!-- AppHeader -->
+		<app-header></app-header>
 
 		<div class="container-fluid">
 			<div class="row">
-				<!-- 左侧 -->
-        <left-ko></left-ko>
+				<!-- AppLeft -->
+        <app-left></app-left>
 				<!-- 右侧 -->
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 					<h2 class="sub-header">Hero List</h2>
@@ -229,8 +229,8 @@
 
 <script>
 //局部组件
-import head from './components/head'
-import left from './components/left'
+import AppHeader from './components/AppHeader'
+import AppLeft from './components/AppLeft'
 
 
 export default {
@@ -238,8 +238,8 @@ export default {
   //注册子组件
   components: {
     //在这里注册组件，不然无法使用
-    'HeadNav':head,
-    'LeftKo':left
+    AppHeader,
+    AppLeft
   }
   
 }
