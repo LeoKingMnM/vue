@@ -9,6 +9,10 @@ Vue.config.productionTip = false
 import './assets/bootstrap/css/bootstrap.min.css'
 import './assets/css/index.css'
 
+//设置通用地址和引入axios
+import axiox from 'axiox'
+Vue.prototype.axios = axiox
+
 
 
 new Vue({
