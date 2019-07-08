@@ -214,7 +214,39 @@
 </template>
 
 <script>
-export default {};
+//导入axios
+import axios from 'axios';
+export default {
+  data() {
+    return {
+      list:[]
+    }
+  },
+  mounted(){
+    //发送请i去获取数据
+    this.loadData()
+  },
+  methods:{
+    //发送请求
+    loadData(){
+      axios
+        .get('')
+        .then( 
+          (response) => {
+            const {data,status} = response
+            if (status==200) {
+              this.list = data
+            }else {
+              alert('获取数据失败')
+            }
+          }
+        )
+        .catch((err)=>{
+          console.log('服务器异常' + err)
+        })
+    }
+  }
+};
 </script>
 
 <style>
