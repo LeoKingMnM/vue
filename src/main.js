@@ -21,6 +21,7 @@ import EquipList from './views//equips/EquipList.vue';
 
 //创建路由对象
 const router = new VueRouter ({
+  linkExactActiveClass:'active',
   //配置路由规则
   routes:[
     {name:'home',path:'/',redirect:'heroes'},
